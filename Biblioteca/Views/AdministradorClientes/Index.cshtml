@@ -1,0 +1,166 @@
+﻿@using Biblioteca.Models;
+@model List<Cliente>
+
+@{
+    ViewBag.Title = "Gestión de Clientes";
+    Layout = "~/Views/Shared/_LayoutAdministrador.cshtml";
+}
+<link rel="stylesheet" href="~/Content/Administrador/index.css" />
+<link rel="stylesheet" href="~/Content/Administrador/modals.css" />
+<script src="~/Scripts/vistas/vistas.js"></script>
+
+<div class="dashboard-container">
+    <header class="dashboard-header">
+        <div>
+            <h1 class="dashboard-title">Clientes</h1>
+            <p class="dashboard-subtitle">Administra las bibliotecas registradas</p>
+        </div>
+        <div class="dashboard-actions">
+            <button class="btn btn-primary" onclick="toggleModal('clienteModal')">
+                <i class="fas fa-plus"></i> Nuevo Cliente
+            </button>
+        </div>
+    </header>
+
+    <section class="dashboard-content">
+        <div class="search-container">
+            <form method="get" action="/AdministradorClientes/Index" role="search">
+                <input type="text" name="busqueda" placeholder="Buscar bibliotecas..." value="@Request.QueryString["search"]" aria-label="Buscar cliente">
+                <button type="submit" class="search-button" aria-label="Buscar">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+
+        @if (Model != null && Model.Any())
+        {
+            <div class="biblioteca-list">
+                @foreach (var cliente in Model)
+                {
+                    <div class="biblioteca-item" onclick="window.location.href='@Url.Action("Details", "AdministradorClientes", new { id = cliente.ID })'">
+                        <div class="biblioteca-info">
+                            <h3>@cliente.Nombre</h3>
+                        </div>
+                        <div class="biblioteca-actions">
+                            <a class="btn btn-edit"
+                               onclick="openEditClienteModal({ID: '@cliente.ID',Nombre: '@cliente.Nombre',Correo: '@cliente.Correo',RolID: '@cliente.RolID',BibliotecaID: '@cliente.BibliotecaID'}); event.stopPropagation();">Editar</a>
+                            <form method="post" action="@Url.Action("Delete", "AdministradorClientes", new { id = cliente.ID })"
+                                  onsubmit="return confirm('¿Confirmar eliminación de cliente?');">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="btn btn-delete" onclick="event.stopPropagation();">Eliminar</button>
+                            </form>
+                        </div>
+                    </div>
+
+                }
+            </div>
+        }
+        else
+        {
+            <div class="empty-state">
+                <i class="fas fa-book-open"></i>
+                <h3>No se encontraron bibliotecas</h3>
+                <p>No hay bibliotecas registradas en el sistema</p>
+                <button class="btn btn-primary" onclick="toggleModal('clienteModal')">
+                    <i class="fas fa-plus"></i> Crear primera biblioteca
+                </button>
+            </div>
+        }
+    </section>
+</div>
+
+<!-- Modal de Crear Cliente -->
+<div class="modal-overlay" id="clienteModal">
+    <div class="modal-form">
+        <button class="close-btn" onclick="closeForm('clienteModal')">✖</button>
+        <h2>Crear Cliente</h2>
+        <form method="post" action="/AdministradorClientes/Create">
+            @Html.AntiForgeryToken()
+            <div class="form-group">
+                <label for="NombreCliente">Nombre</label>
+                <input type="text" id="NombreCliente" name="Nombre" required />
+            </div>
+            <div class="form-group">
+                <label for="Correo">Correo Electrónico</label>
+                <input type="email" id="Correo" name="Correo" required />
+            </div>
+            <div class="form-group">
+                <label for="Contraseña">Contraseña</label>
+                <input type="password" id="Contrasena" name="Contrasena" required />
+            </div>
+            <div class="form-group">
+                <label for="RolID">Rol</label>
+                <select id="RolID" name="RolID" class="form-control" required>
+                    <option value="">Seleccione un rol</option>
+                    @foreach (var rol in ViewBag.Roles as List<RolCliente>)
+                    {
+                        <option value="@rol.ID">@rol.Nombre</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="BibliotecaID">Biblioteca</label>
+                <select id="BibliotecaID" name="BibliotecaID" class="form-control" required>
+                    <option value="">Seleccione una biblioteca</option>
+                    @foreach (var biblioteca in ViewBag.Bibliotecas as List<Biblioteca>)
+                    {
+                        <option value="@biblioteca.ID">@biblioteca.Nombre</option>
+                    }
+                </select>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-success">Guardar</button>
+                <button type="button" class="btn btn-secondary" onclick="closeForm('clienteModal')">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Modal de Editar Cliente -->
+<div class="modal-overlay" id="editarClienteModal">
+    <div class="modal-form">
+        <button class="close-btn" onclick="closeForm('editarClienteModal')">✖</button>
+        <h2>Editar Cliente</h2>
+        <form method="post" action="/AdministradorClientes/Edit">
+            @Html.AntiForgeryToken()
+            <input type="hidden" id="EditID" name="ID" />
+
+            <div class="form-group">
+                <label for="EditNombreCliente">Nombre</label>
+                <input type="text" id="EditNombreCliente" name="Nombre" required />
+            </div>
+            <div class="form-group">
+                <label for="EditCorreo">Correo Electrónico</label>
+                <input type="email" id="EditCorreo" name="Correo" required />
+            </div>
+            <div class="form-group">
+                <label for="EditContrasena">Contraseña</label>
+                <input type="password" id="EditContrasena" name="Contrasena" />
+            </div>
+            <div class="form-group">
+                <label for="EditRolID">Rol</label>
+                <select id="EditRolID" name="RolID" class="form-control" required>
+                    <option value="">Seleccione un rol</option>
+                    @foreach (var rol in ViewBag.Roles as List<RolCliente>)
+                    {
+                        <option value="@rol.ID">@rol.Nombre</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="EditBibliotecaID">Biblioteca</label>
+                <select id="EditBibliotecaID" name="BibliotecaID" class="form-control" required>
+                    <option value="">Seleccione una biblioteca</option>
+                    @foreach (var biblioteca in ViewBag.Bibliotecas as List<Biblioteca>)
+                    {
+                        <option value="@biblioteca.ID">@biblioteca.Nombre</option>
+                    }
+                </select>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-success">Guardar Cambios</button>
+                <button type="button" class="btn btn-secondary" onclick="closeForm('editarClienteModal')">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,109 @@
+﻿@model List<Biblioteca.Models.Biblioteca>
+
+@{
+    ViewBag.Title = "Gestión de Bibliotecas";
+    Layout = "~/Views/Shared/_LayoutAdministrador.cshtml";
+}
+<link rel="stylesheet" href="~/Content/Administrador/index.css" />
+<script src="~/Scripts/vistas/vistas.js"></script>
+
+<div class="dashboard-container">
+    <header class="dashboard-header">
+        <div>
+            <h1 class="dashboard-title">Bibliotecas</h1>
+            <p class="dashboard-subtitle">Administra las bibliotecas registradas</p>
+        </div>
+        <div class="dashboard-actions">
+            <button class="btn btn-primary" onclick="toggleModal('bibliotecaModal')">
+                <i class="fas fa-plus"></i> Nueva Biblioteca
+            </button>
+        </div>
+    </header>
+
+    <section class="dashboard-content">
+        <div class="search-container">
+            <form method="get" action="/AdministradorBibliotecas/Index" role="search">
+                <input type="text" name="busqueda" placeholder="Buscar bibliotecas..." value="@Request.QueryString["search"]" aria-label="Buscar bibliotecas">
+                <button type="submit" class="search-button" aria-label="Buscar">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+
+        @if (Model != null && Model.Any())
+        {
+            <div class="biblioteca-list">
+                @foreach (var biblioteca in Model)
+                {
+                    <div class="biblioteca-item" onclick="window.location.href='@Url.Action("Details", "Bibliotecas", new { id = biblioteca.ID })'">
+                        <div class="biblioteca-info">
+                            <h3>@biblioteca.Nombre</h3>
+                        </div>
+                        <div class="biblioteca-actions">
+                            <a class="btn btn-edit" onclick="openEditModal('@biblioteca.ID', '@biblioteca.Nombre'); event.stopPropagation();">Editar</a>
+                            <form method="post" action="@Url.Action("Delete", "AdministradorBibliotecas", new { id = biblioteca.ID })"
+                                  onsubmit="return confirm('¿Confirmar eliminación de esta biblioteca?');">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="btn btn-delete" onclick="event.stopPropagation();">Eliminar</button>
+                            </form>
+                        </div>
+                    </div>
+
+                }
+            </div>
+        }
+        else
+        {
+            <div class="empty-state">
+                <i class="fas fa-book-open"></i>
+                <h3>No se encontraron bibliotecas</h3>
+                <p>No hay bibliotecas registradas en el sistema</p>
+                <button class="btn btn-primary" onclick="toggleModal('bibliotecaModal')">
+                    <i class="fas fa-plus"></i> Crear primera biblioteca
+                </button>
+            </div>
+        }
+    </section>
+</div>
+
+<!-- Modal para Nueva Biblioteca -->
+<div class="modal-overlay" id="bibliotecaModal">
+    <div class="modal-form">
+        <button class="close-btn" onclick="toggleModal('bibliotecaModal')">✖</button>
+        <h2>Crear Biblioteca</h2>
+        <form method="post" action="/AdministradorBibliotecas/Create">
+            @Html.AntiForgeryToken()
+            <div class="form-group">
+                <label for="Nombre">Nombre de la Biblioteca</label>
+                <input type="text" id="Nombre" name="Nombre" required placeholder="Ej: Biblioteca Central">
+            </div>
+            <div class="form-actions">
+                <button type="button" class="btn btn-secondary" onclick="toggleModal('bibliotecaModal')">Cancelar</button>
+                <button type="submit" class="btn btn-success">Guardar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Modal para Editar Biblioteca -->
+<div class="modal-overlay" id="EditarBiblioteca">
+    <div class="modal-form">
+        <button class="close-btn" onclick="toggleModal('EditarBiblioteca')">✖</button>
+        <h2>Editar Biblioteca</h2>
+        <form method="post" action="/AdministradorBibliotecas/Edit">
+            @Html.AntiForgeryToken()
+            <input type="hidden" id="editId" name="ID" />
+            <div class="form-group">
+                <label for="editNombre">Nuevo Nombre de la Biblioteca</label>
+                <input type="text" id="editNombre" name="Nombre" required />
+            </div>
+            <div class="form-actions">
+                <button type="button" class="btn btn-secondary" onclick="toggleModal('EditarBiblioteca')">Cancelar</button>
+                <button type="submit" class="btn btn-success">Guardar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
