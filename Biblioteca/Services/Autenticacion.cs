@@ -20,6 +20,8 @@ namespace Biblioteca.Services
 
         protected override bool AuthorizeCore(HttpContextBase httpContext)
         {
+            // Verificar si la sesión existe y contiene la clave "Rol"
+
             if (httpContext.Session?["Rol"] == null)
             {
                 return false;
@@ -28,5 +30,6 @@ namespace Biblioteca.Services
             var rol = httpContext.Session["Rol"].ToString();
             return _rolesPermitidos.Contains(rol);
         }
+
     }
 }

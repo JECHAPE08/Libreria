@@ -1,5 +1,139 @@
-﻿@{
-    ViewBag.Title = "Details";
+﻿@model Biblioteca.Models.Biblioteca
+
+@{
+    ViewBag.Title = "Detalles de Biblioteca";
+    Layout = "~/Views/Shared/_LayoutAdministrador.cshtml";
 }
+<link rel="stylesheet" href="~/Content/Administrador/index.css" />
+<link rel="stylesheet" href="~/Content/Administrador/Biblioteca/Details.css" />
+<link rel="stylesheet" href="~/Content/Administrador/index.css" />
+<link rel="stylesheet" href="~/Content/Administrador/modals.css" />
+<link rel="stylesheet" href="~/Content/Administrador/Usuarios/Index.css" />
+
+<div class="biblioteca-detalles-container">
+    <h2>@Model.Nombre</h2>
+
+    <p><strong>Cantidad de usuarios:</strong> @ViewBag.CantidadUsuarios</p>
+
+    <h3>Administradores</h3>
+
+    <ul class="lista-admins">
+        @foreach (var admin in (List<Biblioteca.Models.Cliente>)ViewBag.Administradores)
+        {
+            <li>@admin.Nombre  - @admin.RolClientes.Nombre</li>
+        }
+    </ul>
 
 
+    <section class="dashboard-content">
+        <div class="search-container">
+            <form method="get" action="@Url.Action("Details", "AdministradorBibliotecas")" role="search">
+                <input type="hidden" name="id" value="@Model.ID" />
+                <input type="text" name="busqueda" placeholder="Buscar usuario..." value="@ViewBag.Busqueda" aria-label="Buscar usuario">
+                <button type="submit" class="search-button" aria-label="Buscar">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+
+
+
+        <div class="biblioteca-list">
+            @foreach (var usuario in ViewBag.usuarios)
+            {
+                <div class="biblioteca-item">
+                    <div class="biblioteca-info">
+                        <h3>@usuario.Nombre</h3>
+                        <p class="cliente-preview">
+                            @usuario.Biblioteca.Nombre • @(usuario.RolUsuario != null ? usuario.RolUsuario.Nombre : "Sin rol")
+                        </p>
+                    </div>
+
+                    <div class="biblioteca-actions">
+                        <a class="btn btn-edit"
+                            onclick="openEditUsuarioModal({
+                               ID: @usuario.ID,
+                               Nombre: '@usuario.Nombre',
+                               Correo: '@usuario.Correo',
+                               RolID: '@usuario.RolID',
+                               BibliotecaID: '@usuario.BibliotecaID'
+                           });">
+                            Editar
+                        </a>
+
+                        <form method="post" action="@Url.Action("Delete", "AdministradorUsuarios", new { id = usuario.ID })"
+                              onsubmit="return confirm('¿Confirmar eliminación de usuario?');">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-delete" onclick="event.stopPropagation();">Eliminar</button>
+                        </form>
+                    </div>
+                </div>
+            }
+        </div>
+
+
+    </section>
+
+</div>
+
+<div class="acciones-detalles">
+    <a href="@Url.Action("Index", "AdministradorBibliotecas")" class="btn btn-volver">← Volver</a>
+</div>
+
+
+<!-- Modal para Editar Usuario -->
+<div class="modal-overlay" id="EditarUsuario">
+    <div class="modal-form">
+        <button class="close-btn" onclick="closeForm('EditarUsuario')">✖</button>
+        <h2>Editar Usuario</h2>
+        <form method="post" action="/AdministradorUsuarios/Edit">
+            @Html.AntiForgeryToken()
+            <input type="hidden" id="editId" name="ID" />
+            <input type="hidden" name="redirectTo" value="BibliotecaDetails" />
+            <div class="form-group">
+                <label for="editNombre">Nombre del Usuario</label>
+                <input type="text" id="editNombre" name="Nombre" required />
+            </div>
+            <div class="form-group">
+                <label for="editEmail">Correo Electrónico</label>
+                <input type="email" id="editEmail" name="Correo" required />
+            </div>
+            <div class="form-group">
+                <label for="editBibliotecaID">Biblioteca Asignada</label>
+                <select id="editBibliotecaID" name="BibliotecaID">
+                    <option value="">-- Seleccione una biblioteca --</option>
+                    @foreach (var biblioteca in ViewBag.Bibliotecas)
+                    {
+                        <option value="@biblioteca.ID">@biblioteca.Nombre</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="editRol">Rol del Usuario</label>
+                <select id="editRol" name="RolID" required>
+                    @foreach (var rol in ViewBag.Roles)
+                    {
+                        <option value="@rol.ID">@rol.Nombre</option>
+                    }
+                </select>
+            </div>
+            <div class="form-actions">
+                <button type="button" class="btn btn-secondary" onclick="closeForm('EditarUsuario')">Cancelar</button>
+                <button type="submit" class="btn btn-success">Guardar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="~/Scripts/vistas/vistas.js"></script>
+<script>
+    function openEditUsuarioModal(usuario) {
+        document.getElementById('editId').value = usuario.ID;
+        document.getElementById('editNombre').value = usuario.Nombre;
+        document.getElementById('editEmail').value = usuario.Correo;
+        document.getElementById('editRol').value = usuario.RolID;  // Se asigna RolID al select
+        document.getElementById('editBibliotecaID').value = usuario.BibliotecaID;
+
+        document.getElementById('EditarUsuario').style.display = 'flex';
+    }
+</script>

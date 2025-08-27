@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
-using System.Web.UI.WebControls;
 using Biblioteca.Models;
 using Biblioteca.Models.ModelosDTO;
 using Biblioteca.Services;
@@ -16,7 +13,7 @@ namespace Biblioteca.Controllers
     public class LoginController : Controller
     {
         private Context db = new Context();
-        // GET: Login
+
         public ActionResult Index()
         {
             return View();
@@ -28,7 +25,7 @@ namespace Biblioteca.Controllers
             try
             {
                 var adminT = BuscarAdmin(login);
-                var clienteT = Buscarliente(login);
+                var clienteT = BuscarCliente(login);
                 var usuarioT = BuscarUsuario(login);
 
                 await Task.WhenAll(adminT, clienteT, usuarioT);
@@ -55,23 +52,24 @@ namespace Biblioteca.Controllers
 
                 ViewBag.ErrorMessage = "Correo o Contraseña incorrectos";
                 return View(usuario);
-
             }
-            catch
+            catch (Exception ex)
             {
-                Debug.Print("----------------Excepcion----------");
-                return View();
+                ViewBag.ErrorMessage = ex.Message;
+                return View(login);
             }
-        }
+         }
+
+
 
         public ActionResult Logout() 
         {
             SessionU.CerrarSesion();
-            return RedirectToAction("Index", "Login");
+            return RedirectToAction("Index");
         }
 
+        public async Task<UsuarioDTO> BuscarCliente(LoginDTO usuario )
 
-        public async Task<UsuarioDTO> Buscarliente(LoginDTO usuario )
         {
             try
             {
@@ -89,11 +87,16 @@ namespace Biblioteca.Controllers
             }
             catch
             {
+
                 Debug.Print("--------------------Ocurrio un error al validar con Cliente-------------------------------");
+
+                Debug.Print("Ocurrio un error al validar con Cliente");
+
                 return null;
             }
 
         }
+
 
         public async Task<UsuarioDTO> BuscarUsuario(LoginDTO usuario)
         {
@@ -137,6 +140,15 @@ namespace Biblioteca.Controllers
                 Debug.Print("-----------------Ocurrio un error al validar con Administrador------------------------");
                 return null;
             }
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
         }
 
     }

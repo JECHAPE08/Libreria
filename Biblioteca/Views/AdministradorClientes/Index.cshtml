@@ -7,6 +7,8 @@
 }
 <link rel="stylesheet" href="~/Content/Administrador/index.css" />
 <link rel="stylesheet" href="~/Content/Administrador/modals.css" />
+<link rel="stylesheet" href="~/Content/Administrador/Clientes/Clientes.css" />
+
 <script src="~/Scripts/vistas/vistas.js"></script>
 
 <div class="dashboard-container">
@@ -40,7 +42,11 @@
                     <div class="biblioteca-item" onclick="window.location.href='@Url.Action("Details", "AdministradorClientes", new { id = cliente.ID })'">
                         <div class="biblioteca-info">
                             <h3>@cliente.Nombre</h3>
+                            <p class="cliente-preview">
+                                @cliente.Biblioteca.Nombre • @(cliente.RolClientes != null ? cliente.RolClientes.Nombre : "Sin rol")
+                            </p>
                         </div>
+
                         <div class="biblioteca-actions">
                             <a class="btn btn-edit"
                                onclick="openEditClienteModal({ID: '@cliente.ID',Nombre: '@cliente.Nombre',Correo: '@cliente.Correo',RolID: '@cliente.RolID',BibliotecaID: '@cliente.BibliotecaID'}); event.stopPropagation();">Editar</a>

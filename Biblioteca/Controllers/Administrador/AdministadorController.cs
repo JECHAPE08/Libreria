@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace Biblioteca.Controllers
 {
+
     [Autenticacion("Administrador")]
     public class AdministradorController : Controller
     {
@@ -17,11 +18,11 @@ namespace Biblioteca.Controllers
         public ActionResult Index()
         {
             Validar();
-            ViewBag.TotalBibliotecas = db.Bibliotecas.Count();
-            ViewBag.TotalClientes = db.Clientes.Count(); 
+            ViewBag.TotalBibliotecas = db.Bibliotecas.Where(u => u.Estatus == true).Count();
+            ViewBag.TotalClientes = db.Clientes.Where(u => u.Estatus == true).Count();
             ViewBag.TotalLibros = db.Libros.Count();
             ViewBag.Roles = db.RolClientes.ToList();
-            ViewBag.Bibliotecas = db.Bibliotecas.ToList();
+            ViewBag.Bibliotecas = db.Bibliotecas.Where(u => u.Estatus == true).ToList();
             return View();
         }
 

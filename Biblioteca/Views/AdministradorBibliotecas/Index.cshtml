@@ -5,6 +5,7 @@
     Layout = "~/Views/Shared/_LayoutAdministrador.cshtml";
 }
 <link rel="stylesheet" href="~/Content/Administrador/index.css" />
+<link rel="stylesheet" href="~/Content/Administrador/Biblioteca/Bibliotecas.css" />
 <script src="~/Scripts/vistas/vistas.js"></script>
 
 <div class="dashboard-container">
@@ -35,9 +36,14 @@
             <div class="biblioteca-list">
                 @foreach (var biblioteca in Model)
                 {
-                    <div class="biblioteca-item" onclick="window.location.href='@Url.Action("Details", "Bibliotecas", new { id = biblioteca.ID })'">
+                    <div class="biblioteca-item" onclick="window.location.href='@Url.Action("Details", "AdministradorBibliotecas", new { id = biblioteca.ID })'">
                         <div class="biblioteca-info">
                             <h3>@biblioteca.Nombre</h3>
+                            <p class="biblioteca-preview">
+                                @(ViewBag.UsuariosPorBiblioteca.ContainsKey(biblioteca.ID)
+                                    ? ViewBag.UsuariosPorBiblioteca[biblioteca.ID]
+                                    : 0) usuarios
+                            </p>
                         </div>
                         <div class="biblioteca-actions">
                             <a class="btn btn-edit" onclick="openEditModal('@biblioteca.ID', '@biblioteca.Nombre'); event.stopPropagation();">Editar</a>

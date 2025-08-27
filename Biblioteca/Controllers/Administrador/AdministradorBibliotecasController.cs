@@ -20,25 +20,57 @@ namespace Biblioteca.Controllers.Administrador
 
         public ActionResult Index(string busqueda)
         {
-            var bibliotecas = db.Bibliotecas.ToList();
+            var bibliotecas = db.Bibliotecas.Where(u => u.Estatus == true).ToList();
             if (!string.IsNullOrEmpty(busqueda))
             {
                 bibliotecas = (List<Models.Biblioteca>)bibliotecas.Where(b => b.Nombre.Contains(busqueda)).ToList();
             }
+            var usuariosPorBiblioteca = db.Usuarios
+                                  .GroupBy(u => u.BibliotecaID)
+                                  .ToDictionary(g => g.Key, g => g.Count());
+
+            ViewBag.UsuariosPorBiblioteca = usuariosPorBiblioteca;
             return View(bibliotecas);
         }
 
 
-        public async Task<ActionResult> Details(int? id)
+        public ActionResult Details(int id, string busqueda = "")
         {
-            if (id == null)
+            var biblioteca = db.Bibliotecas.Find(id);
+
+            if (biblioteca == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return HttpNotFound();
             }
-            Models.Biblioteca biblioteca = await db.Bibliotecas.FindAsync(id);
+
+            // Consulta base: usuarios que pertenecen a esta biblioteca
+            var usuariosQuery = db.Usuarios.Where(u => u.BibliotecaID == id);
+
+            // Si hay búsqueda, filtramos
+            if (!string.IsNullOrEmpty(busqueda))
+            {
+                usuariosQuery = usuariosQuery.Where(u => u.Nombre.Contains(busqueda) || u.Correo.Contains(busqueda));
+            }
+
+            var usuarios = usuariosQuery.ToList();
+
+            // Administradores de esta biblioteca
+            var administradores = db.Clientes
+                .Where(u => u.BibliotecaID == id)
+                .ToList();
+
+            // Pasamos datos a la vista
+            ViewBag.usuarios = usuarios;
+            ViewBag.CantidadUsuarios = usuarios.Count;
+            ViewBag.Administradores = administradores;
+            ViewBag.Busqueda = busqueda; // para rellenar el input
+            ViewBag.Bibliotecas = db.Bibliotecas.ToList();
+            ViewBag.Roles = db.RolUsuarios.ToList();
 
             return View(biblioteca);
         }
+
+
 
 
         [HttpPost]
@@ -95,7 +127,7 @@ namespace Biblioteca.Controllers.Administrador
             {
                 return HttpNotFound();
             }
-            db.Bibliotecas.Remove(biblioteca);
+            biblioteca.Estatus = false;
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }

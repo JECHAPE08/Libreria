@@ -1,0 +1,9 @@
+﻿.cliente-preview {
+    margin: 4px 0 0 0;
+    font-size: 0.9rem;
+    color: #718096; /* gris sutil */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 500px; /* evita que se expanda demasiado */
+}

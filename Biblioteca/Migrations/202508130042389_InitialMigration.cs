@@ -83,6 +83,7 @@
                     })
                 .PrimaryKey(t => t.ID)
                 .ForeignKey("dbo.Bibliotecas", t => t.BibliotecaID, cascadeDelete: true)
+                .ForeignKey("dbo.Bibliotecas", t => t.BibliotecaID, cascadeDelete: false)
                 .ForeignKey("dbo.RolClientes", t => t.RolID, cascadeDelete: true)
                 .Index(t => t.RolID)
                 .Index(t => t.BibliotecaID);

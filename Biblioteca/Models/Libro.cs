@@ -14,7 +14,7 @@ namespace Biblioteca.Models
         public string Materia { get; set; }
         public int NumeroEjemplar { get; set; }
         public string Clasificacion { get; set; }
-        public bool Estatus { get; set; }
+        public bool Estatus { get; set; } = true;
         public int CategoriaID { get; set; }
         [ForeignKey("CategoriaID")]
         public virtual Categoria Categoria { get; set; }

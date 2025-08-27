@@ -127,9 +127,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\Administrador\AdministadorController.cs" />
     <Compile Include="Controllers\Administrador\AdministradorBibliotecasController.cs" />
     <Compile Include="Controllers\Administrador\AdministradorClientesController.cs" />
-    <Compile Include="Controllers\Administrador\AdministradorController.cs" />
+    <Compile Include="Controllers\Administrador\AdministradorUsuariosController.cs" />
     <Compile Include="Controllers\Cliente\ClienteController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\Usuario\UsuariosController.cs" />
@@ -139,6 +140,10 @@
     <Compile Include="Migrations\202508130042389_InitialMigration.cs" />
     <Compile Include="Migrations\202508130042389_InitialMigration.Designer.cs">
       <DependentUpon>202508130042389_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202508262341153_Correccion de Modelos.cs" />
+    <Compile Include="Migrations\202508262341153_Correccion de Modelos.Designer.cs">
+      <DependentUpon>202508262341153_Correccion de Modelos.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Administrador.cs" />
@@ -163,8 +168,12 @@
     <Compile Include="Services\SessionU.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Administrador\Biblioteca\Bibliotecas.css" />
+    <Content Include="Content\Administrador\Biblioteca\Details.css" />
+    <Content Include="Content\Administrador\Clientes\Clientes.css" />
     <Content Include="Content\Administrador\index.css" />
     <Content Include="Content\Administrador\modals.css" />
+    <Content Include="Content\Administrador\Usuarios\Index.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -195,6 +204,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Administador\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css.map" />
@@ -218,7 +228,12 @@
     <Content Include="Views\AdministradorBibliotecas\Index.cshtml" />
     <Content Include="Views\AdministradorClientes\Details.cshtml" />
     <Content Include="Views\AdministradorClientes\Index.cshtml" />
+    <Content Include="Views\AdministradorUsuarios\Index.cshtml" />
+    <Content Include="Views\Administrador\Bibliotecas.cshtml" />
+    <Content Include="Views\Administrador\Clientes.cshtml" />
+    <Content Include="Views\Administrador\CrearUsuario.cshtml" />
     <Content Include="Views\Administrador\Index.cshtml" />
+    <Content Include="Views\Administrador\Libros.cshtml" />
     <Content Include="Views\Cliente\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Login\RecuperarContraseña.cshtml" />
@@ -232,6 +247,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202508130042389_InitialMigration.resx">
       <DependentUpon>202508130042389_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202508262341153_Correccion de Modelos.resx">
+      <DependentUpon>202508262341153_Correccion de Modelos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

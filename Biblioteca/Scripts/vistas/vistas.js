@@ -26,6 +26,8 @@ function openEditClienteModal(cliente) {
 
     document.getElementById('editarClienteModal').style.display = 'flex';
 }
+
+
 function openForm(form) {
     document.getElementById(form).style.display = "flex";
 }

@@ -1,0 +1,140 @@
+﻿.biblioteca-detalles-container {
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.lista-admins {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.tabla-usuarios {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+    .tabla-usuarios th, .tabla-usuarios td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    .tabla-usuarios th {
+        background-color: #f4f4f4;
+        text-align: left;
+    }
+
+.acciones-detalles {
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contenedor principal de detalles */
+.biblioteca-detalles-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 24px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+    /* Título y subtítulos */
+    .biblioteca-detalles-container h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #2d3748;
+        margin-bottom: 12px;
+    }
+
+    .biblioteca-detalles-container p {
+        font-size: 1rem;
+        color: #4a5568;
+        margin-bottom: 24px;
+    }
+
+    .biblioteca-detalles-container h3 {
+        font-size: 1.3rem;
+        color: #2d3748;
+        margin-bottom: 12px;
+    }
+
+/* Lista de administradores */
+.lista-admins {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+    .lista-admins li {
+        background-color: #edf2f7;
+        padding: 10px 14px;
+        border-radius: 8px;
+        font-weight: 500;
+        color: #2d3748;
+    }
+
+/* Lista de usuarios */
+.biblioteca-list .biblioteca-item {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .biblioteca-list .biblioteca-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
+
+/* Info de usuario dentro de la lista */
+.biblioteca-info h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.cliente-preview {
+    font-size: 0.9rem;
+    color: #718096;
+}
+
+/* Acciones (editar / eliminar) */
+.biblioteca-actions a.btn-edit,
+.biblioteca-actions button.btn-delete {
+    min-width: 90px;
+    height: 36px;
+    font-size: 0.9rem;
+}
+
+/* Botón volver */
+.acciones-detalles {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 24px;
+}
+
+    .acciones-detalles .btn-volver {
+        background-color: #718096;
+    }
+
+        .acciones-detalles .btn-volver:hover {
+            background-color: #4a5568;
+        }

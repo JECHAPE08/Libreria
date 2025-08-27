@@ -15,7 +15,11 @@ namespace Biblioteca.Controllers.Administrador
         private Context db = new Context();
         public ActionResult Index(string busqueda)
         {
-            var clientes = db.Clientes.ToList();
+            var clientes = db.Clientes
+                     .Include(c => c.RolClientes)
+                     .Include(c => c.Biblioteca)
+                     .Where(u => u.Estatus == true)
+                     .ToList();
             if (!string.IsNullOrEmpty(busqueda))
             {
                 clientes = (List<Models.Cliente>)clientes.Where(b => b.Nombre.Contains(busqueda)).ToList();
@@ -26,6 +30,8 @@ namespace Biblioteca.Controllers.Administrador
         }
 
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(Models.Cliente clientes)
         {
             if (ModelState.IsValid)
@@ -39,17 +45,24 @@ namespace Biblioteca.Controllers.Administrador
         }
 
 
+        // GET: Clientes/Edit/5
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             Models.Cliente cliente = await db.Clientes.FindAsync(id);
             if (cliente == null)
             {
                 return HttpNotFound();
             }
+
+            // Pasamos las listas para los select
+            ViewBag.RolID = new SelectList(db.RolClientes, "ID", "Nombre", cliente.RolID);
+            ViewBag.BibliotecaID = new SelectList(db.Bibliotecas, "ID", "Nombre", cliente.BibliotecaID);
+
             return View(cliente);
         }
 
@@ -59,13 +72,43 @@ namespace Biblioteca.Controllers.Administrador
         {
             if (ModelState.IsValid)
             {
-                db.Entry(cliente).State = EntityState.Modified;
-                db.Entry(cliente).Property(x => x.AdministradorID).IsModified = false;
+                // Marcamos la entidad como modificada
+                var clienteDb = await db.Clientes.FindAsync(cliente.ID);
+
+                if (clienteDb == null)
+                    return HttpNotFound();
+
+                if (cliente.Contrasena != null)
+                    clienteDb.Contrasena = cliente.Contrasena;
+
+                clienteDb.Nombre = cliente.Nombre;
+                clienteDb.Correo = cliente.Correo;
+                clienteDb.RolID = cliente.RolID;
+                clienteDb.BibliotecaID = cliente.BibliotecaID;
+
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            ViewBag.AdministradorID = new SelectList(db.Administradores, "ID", "Nombre", biblioteca.AdministradorID);
-            return View(biblioteca);
+
+            // Si el modelo no es válido, recargamos los selects
+            ViewBag.RolID = new SelectList(db.RolClientes, "ID", "Nombre", cliente.RolID);
+            ViewBag.BibliotecaID = new SelectList(db.Bibliotecas, "ID", "Nombre", cliente.BibliotecaID);
+
+            return View(cliente);
         }
+
+
+        public async Task<ActionResult> Delete(int? id)
+        {
+            Models.Cliente cliente = await db.Clientes.FindAsync(id);
+            if (cliente == null)
+            {
+                return HttpNotFound();
+            }
+            cliente.Estatus = false;
+            await db.SaveChangesAsync();
+            return RedirectToAction("Index");
+        }
+
     }
 }

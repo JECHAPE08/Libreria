@@ -1,14 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\EQUIPO-12\\Downloads\\Biblioteca-main\\",
+  "WorkspaceRootPath": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\downloads\\biblioteca-main\\biblioteca\\controllers\\cliente\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\controllers\\cliente\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\controllers\\administrador\\administadorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\controllers\\administrador\\administadorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\downloads\\biblioteca-main\\biblioteca\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\views\\shared\\_layoutadministrador.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\views\\shared\\_layoutadministrador.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\views\\administradorbibliotecas\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\views\\administradorbibliotecas\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -59,27 +71,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ClienteController.cs",
-              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\Downloads\\Biblioteca-main\\Biblioteca\\Controllers\\Cliente\\ClienteController.cs",
-              "RelativeDocumentMoniker": "Biblioteca\\Controllers\\Cliente\\ClienteController.cs",
-              "ToolTip": "C:\\Users\\EQUIPO-12\\Downloads\\Biblioteca-main\\Biblioteca\\Controllers\\Cliente\\ClienteController.cs",
-              "RelativeToolTip": "Biblioteca\\Controllers\\Cliente\\ClienteController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Title": "AdministadorController.cs",
+              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Controllers\\Administrador\\AdministadorController.cs",
+              "RelativeDocumentMoniker": "Biblioteca\\Controllers\\Administrador\\AdministadorController.cs",
+              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Controllers\\Administrador\\AdministadorController.cs",
+              "RelativeToolTip": "Biblioteca\\Controllers\\Administrador\\AdministadorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAiwCMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T20:41:18.78Z",
+              "WhenOpened": "2025-08-27T23:25:05.351Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "RouteConfig.cs",
-              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\Downloads\\Biblioteca-main\\Biblioteca\\App_Start\\RouteConfig.cs",
-              "RelativeDocumentMoniker": "Biblioteca\\App_Start\\RouteConfig.cs",
-              "ToolTip": "C:\\Users\\EQUIPO-12\\Downloads\\Biblioteca-main\\Biblioteca\\App_Start\\RouteConfig.cs",
-              "RelativeToolTip": "Biblioteca\\App_Start\\RouteConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Biblioteca\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Biblioteca\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAlwHoAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T19:31:46.413Z",
+              "WhenOpened": "2025-08-27T23:22:16.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_LayoutAdministrador.cshtml",
+              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\Shared\\_LayoutAdministrador.cshtml",
+              "RelativeDocumentMoniker": "Biblioteca\\Views\\Shared\\_LayoutAdministrador.cshtml",
+              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\Shared\\_LayoutAdministrador.cshtml",
+              "RelativeToolTip": "Biblioteca\\Views\\Shared\\_LayoutAdministrador.cshtml",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-27T23:22:03.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\AdministradorBibliotecas\\Details.cshtml",
+              "RelativeDocumentMoniker": "Biblioteca\\Views\\AdministradorBibliotecas\\Details.cshtml",
+              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\AdministradorBibliotecas\\Details.cshtml",
+              "RelativeToolTip": "Biblioteca\\Views\\AdministradorBibliotecas\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-27T23:21:48.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "Biblioteca\\Models\\Cliente.cs",
+              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Models\\Cliente.cs",
+              "RelativeToolTip": "Biblioteca\\Models\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T23:20:45.184Z",
               "EditorCaption": ""
             }
           ]
