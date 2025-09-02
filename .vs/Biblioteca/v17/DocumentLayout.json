@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\controllers\\administrador\\administadorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\controllers\\administrador\\administadorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\views\\administradorusuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\views\\administradorusuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\content\\administrador\\usuarios\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\content\\administrador\\usuarios\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\views\\shared\\_layoutadministrador.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\views\\shared\\_layoutadministrador.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\views\\administradorclientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\views\\administradorclientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\views\\administradorbibliotecas\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\views\\administradorbibliotecas\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\content\\administrador\\clientes\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\content\\administrador\\clientes\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\views\\administradorbibliotecas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\views\\administradorbibliotecas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\controllers\\administrador\\administradorclientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\controllers\\administrador\\administradorclientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,67 +74,80 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AdministadorController.cs",
-              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Controllers\\Administrador\\AdministadorController.cs",
-              "RelativeDocumentMoniker": "Biblioteca\\Controllers\\Administrador\\AdministadorController.cs",
-              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Controllers\\Administrador\\AdministadorController.cs",
-              "RelativeToolTip": "Biblioteca\\Controllers\\Administrador\\AdministadorController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwCMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T23:25:05.351Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "Biblioteca\\Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "Biblioteca\\Controllers\\LoginController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAlwHoAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T23:22:16.743Z",
+              "Title": "Index.css",
+              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Content\\Administrador\\Usuarios\\Index.css",
+              "RelativeDocumentMoniker": "Biblioteca\\Content\\Administrador\\Usuarios\\Index.css",
+              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Content\\Administrador\\Usuarios\\Index.css",
+              "RelativeToolTip": "Biblioteca\\Content\\Administrador\\Usuarios\\Index.css",
+              "ViewState": "AgIAAKQBAAAAAAAAAAAswLwBAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-02T22:38:07.631Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_LayoutAdministrador.cshtml",
-              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\Shared\\_LayoutAdministrador.cshtml",
-              "RelativeDocumentMoniker": "Biblioteca\\Views\\Shared\\_LayoutAdministrador.cshtml",
-              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\Shared\\_LayoutAdministrador.cshtml",
-              "RelativeToolTip": "Biblioteca\\Views\\Shared\\_LayoutAdministrador.cshtml",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\AdministradorUsuarios\\Index.cshtml",
+              "RelativeDocumentMoniker": "Biblioteca\\Views\\AdministradorUsuarios\\Index.cshtml",
+              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\AdministradorUsuarios\\Index.cshtml",
+              "RelativeToolTip": "Biblioteca\\Views\\AdministradorUsuarios\\Index.cshtml",
+              "ViewState": "AgIAAHACAAAAAAAAAAAowIQCAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-27T23:22:03.244Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\AdministradorBibliotecas\\Details.cshtml",
-              "RelativeDocumentMoniker": "Biblioteca\\Views\\AdministradorBibliotecas\\Details.cshtml",
-              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\AdministradorBibliotecas\\Details.cshtml",
-              "RelativeToolTip": "Biblioteca\\Views\\AdministradorBibliotecas\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-27T23:21:48.454Z",
+              "WhenOpened": "2025-09-02T22:30:24.446Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Cliente.cs",
-              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Models\\Cliente.cs",
-              "RelativeDocumentMoniker": "Biblioteca\\Models\\Cliente.cs",
-              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Models\\Cliente.cs",
-              "RelativeToolTip": "Biblioteca\\Models\\Cliente.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAjAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\AdministradorBibliotecas\\Index.cshtml",
+              "RelativeDocumentMoniker": "Biblioteca\\Views\\AdministradorBibliotecas\\Index.cshtml",
+              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\AdministradorBibliotecas\\Index.cshtml",
+              "RelativeToolTip": "Biblioteca\\Views\\AdministradorBibliotecas\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-02T22:07:46.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.css",
+              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Content\\Administrador\\Clientes\\Index.css",
+              "RelativeDocumentMoniker": "Biblioteca\\Content\\Administrador\\Clientes\\Index.css",
+              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Content\\Administrador\\Clientes\\Index.css",
+              "RelativeToolTip": "Biblioteca\\Content\\Administrador\\Clientes\\Index.css",
+              "ViewState": "AgIAAKQBAAAAAAAAAAAswLEBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-02T22:07:19.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\AdministradorClientes\\Index.cshtml",
+              "RelativeDocumentMoniker": "Biblioteca\\Views\\AdministradorClientes\\Index.cshtml",
+              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\AdministradorClientes\\Index.cshtml",
+              "RelativeToolTip": "Biblioteca\\Views\\AdministradorClientes\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-02T21:50:38.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AdministradorClientesController.cs",
+              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Controllers\\Administrador\\AdministradorClientesController.cs",
+              "RelativeDocumentMoniker": "Biblioteca\\Controllers\\Administrador\\AdministradorClientesController.cs",
+              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Controllers\\Administrador\\AdministradorClientesController.cs",
+              "RelativeToolTip": "Biblioteca\\Controllers\\Administrador\\AdministradorClientesController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-27T23:20:45.184Z",
+              "WhenOpened": "2025-09-02T21:31:02.032Z",
               "EditorCaption": ""
             }
           ]

@@ -23,7 +23,7 @@ body {
 }
 
 .dashboard-container {
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -135,40 +135,24 @@ body {
         background-color: #f8f9fc;
     }
 
-.user-info {
+.biblioteca-info {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.user-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #e3e6f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary);
-}
+    .biblioteca-info i {
+        color: var(--primary);
+        font-size: 1.2rem;
+    }
 
-.user-details h4 {
-    margin: 0;
-    color: #2f3e4d;
-}
-
-.biblioteca-name {
-    font-weight: 500;
-    color: #2f3e4d;
-}
-
-.role-badge {
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.85rem;
+.user-count {
     font-weight: 600;
-    background-color: rgba(78, 115, 223, 0.1);
-    color: var(--primary);
+    color: var(--dark);
+    background: #f8f9fc;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
 }
 
 .status-badge {
@@ -207,16 +191,15 @@ body {
     font-weight: 500;
     text-decoration: none;
     border: 1px solid transparent;
-    white-space: nowrap;
 }
 
-    .btn-action:not(.btn-delete) {
+    .btn-action:not(.btn-delete):not(.btn-view) {
         background-color: rgba(54, 185, 204, 0.1);
         color: var(--info);
         border-color: rgba(54, 185, 204, 0.3);
     }
 
-        .btn-action:not(.btn-delete):hover {
+        .btn-action:not(.btn-delete):not(.btn-view):hover {
             background-color: var(--info);
             color: white;
         }
@@ -230,6 +213,17 @@ body {
 
     .btn-delete:hover {
         background-color: var(--danger);
+        color: white;
+    }
+
+.btn-view {
+    background-color: rgba(78, 115, 223, 0.1);
+    color: var(--primary);
+    border-color: rgba(78, 115, 223, 0.3);
+}
+
+    .btn-view:hover {
+        background-color: var(--primary);
         color: white;
     }
 
@@ -249,9 +243,6 @@ body {
 .empty-state {
     text-align: center;
     padding: 60px 20px;
-    border: 2px dashed #e3e6f0;
-    border-radius: 10px;
-    margin: 20px 0;
 }
 
 .empty-icon {
@@ -359,10 +350,7 @@ label {
     color: #333;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-select {
+input[type="text"] {
     width: 100%;
     padding: 12px 15px;
     border-radius: 6px;
@@ -372,10 +360,7 @@ select {
     transition: border-color 0.2s;
 }
 
-    input[type="text"]:focus,
-    input[type="email"]:focus,
-    input[type="password"]:focus,
-    select:focus {
+    input[type="text"]:focus {
         border-color: var(--primary);
         outline: none;
         box-shadow: 0 0 0 3px rgba(78, 115, 223, 0.1);
@@ -406,7 +391,7 @@ select {
         color: #333;
     }
 
-@@keyframes fadeIn {
+@keyframes fadeIn {
     from {
         opacity: 0;
         transform: scale(0.96);
@@ -418,10 +403,14 @@ select {
     }
 }
 
-@@media (max-width: 768px) {
+@media (max-width: 768px) {
     .dashboard-header {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .dashboard-title {
+        font-size: 1.8rem;
     }
 
     .search-input-group {

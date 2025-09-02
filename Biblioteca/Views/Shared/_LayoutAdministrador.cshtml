@@ -2,143 +2,134 @@
     Layout = null;
 }
 
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f5f7fa;
-    }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Bibliotecario - Administración</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="~/Content/Administrador/LayoutAdministrador.css" />
+</head>
 
-    .sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 240px;
-        height: 100%;
-        background-color: #2f3e4d;
-        color: white;
-        padding-top: 60px;
-        transition: transform 0.3s ease;
-        z-index: 1000;
-        overflow-y: auto;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-    }
+<body>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-title"></div>
+        </div>
 
-    .sidebar.collapsed {
-        transform: translateX(-240px);
-    }
+        <div class="sidebar-menu">
+            <a href="/Administrador" class="sidebar-item">
+                <div class="sidebar-icon"><i class="fas fa-home"></i></div>
+                <span>Inicio</span>
+            </a>
+            <a href="/AdministradorBibliotecas" class="sidebar-item">
+                <div class="sidebar-icon"><i class="fas fa-book-reader"></i></div>
+                <span>Bibliotecas</span>
+            </a>
+            <a href="/AdministradorClientes" class="sidebar-item">
+                <div class="sidebar-icon"><i class="fas fa-users"></i></div>
+                <span>Clientes</span>
+            </a>
+            <a href="/AdministradorUsuarios" class="sidebar-item">
+                <div class="sidebar-icon"><i class="fas fa-user-tie"></i></div>
+                <span>Usuarios</span>
+            </a>
+        </div>
 
-    .sidebar a {
-        display: block;
-        color: white;
-        padding: 15px 30px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: background-color 0.2s ease;
-    }
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="user-details">
+                    <div class="user-name">Administrador</div>
+                    <div class="user-role">Sistema</div>
+                </div>
+            </div>
+            <a href="/Login/Logout" class="logout-btn">
+                <i class="fas fa-sign-out-alt logout-icon"></i>
+                Cerrar Sesión
+            </a>
+        </div>
+    </div>
 
-    .sidebar a:hover {
-        background-color: #405768;
-    }
+    <button id="toggleBtn" aria-label="Toggle Menu">
+        <i class="fas fa-bars"></i>
+    </button>
 
-    #toggleBtn {
-        position: fixed;
-        top: 10px;
-        left: 0;
-        width: 60px;
-        height: 45px;
-        background-color: #22303c;
-        border: none;
-        color: white;
-        font-size: 22px;
-        cursor: pointer;
-        text-align: center;
-        transition: all 0.3s ease;
-        z-index: 1101;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-    }
+    <div id="mainContent" class="main">
+        @RenderBody()
+    </div>
 
-    #toggleBtn:hover {
-        background-color: #34495e;
-    }
+    <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.getElementById('mainContent');
+        const sidebarItems = document.querySelectorAll('.sidebar-item');
 
-    .main {
-        margin-left: 240px;
-        padding: 30px;
-        transition: margin-left 0.3s ease;
-        min-height: 100vh;
-        background-color: white;
-    }
+        // Función para toggle del sidebar
+        toggleBtn.addEventListener('click', () => {
+            if (window.innerWidth > 768) {
+                sidebar.classList.toggle('collapsed');
+                mainContent.classList.toggle('expanded');
+                // Actualizar icono del botón
+                const icon = toggleBtn.querySelector('i');
+                if (sidebar.classList.contains('collapsed')) {
+                    icon.className = 'fas fa-bars';
+                } else {
+                    icon.className = 'fas fa-times';
+                }
+            } else {
+                sidebar.classList.toggle('show');
+            }
+        });
 
-    .main.expanded {
-        margin-left: 0;
-    }
+        // Cerrar sidebar en móviles al hacer clic en un enlace
+        sidebarItems.forEach(item => {
+            item.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    sidebar.classList.remove('show');
+                }
+            });
+        });
 
-    @@media (max-width: 768px) {
-        .sidebar {
-            transform: translateX(-240px);
+        // Cerrar sidebar en móviles al hacer clic fuera
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768 &&
+                !sidebar.contains(e.target) &&
+                e.target !== toggleBtn &&
+                !toggleBtn.contains(e.target)) {
+                sidebar.classList.remove('show');
+            }
+        });
+
+        // Manejar redimensionamiento
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                sidebar.classList.remove('show');
+            } else {
+                if (!sidebar.classList.contains('collapsed')) {
+                    sidebar.classList.add('collapsed');
+                    mainContent.classList.add('expanded');
+                }
+            }
+        });
+
+        // Marcar elemento activo según la URL actual
+        function setActiveMenuItem() {
+            const currentPath = window.location.pathname;
+            sidebarItems.forEach(item => {
+                if (item.getAttribute('href') === currentPath) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
         }
 
-        .sidebar.show {
-            transform: translateX(0);
-        }
-
-        #toggleBtn {
-            left: 10px;
-            width: 40px;
-            height: 40px;
-            font-size: 26px;
-            background-color: #2f3e4d;
-        }
-
-        .main {
-            margin-left: 0;
-            padding: 15px;
-        }
-    }
-</style>
-
-<div id="sidebar" class="sidebar">
-    <a href="/Administrador">🏛 Inicio</a>
-    <a href="/AdministradorBibliotecas">🏛 Bibliotecas</a>
-    <a href="/AdministradorClientes">👥 Clientes</a>
-    <a href="/AdministradorUsuarios">👥 Usuarios</a>
-    <a href="/Login/Logout">🚪 Cerrar Sesión</a>
-</div>
-
-<button id="toggleBtn" aria-label="Toggle Menu">&#9776;</button>
-
-<div id="mainContent" class="main">
-    @RenderBody()
-</div>
-
-<script>
-    const toggleBtn = document.getElementById('toggleBtn');
-    const sidebar = document.getElementById('sidebar');
-    const mainContent = document.getElementById('mainContent');
-
-    toggleBtn.addEventListener('click', () => {
-        // Para pantallas grandes
-        if (window.innerWidth > 768) {
-            sidebar.classList.toggle('collapsed');
-            mainContent.classList.toggle('expanded');
-        } else {
-            // Para pantallas pequeñas
-            sidebar.classList.toggle('show');
-        }
-    });
-
-    // Opcional: cerrar sidebar si se redimensiona y el menú no aplica la misma clase
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
-            sidebar.classList.remove('show');
-        } else {
-            sidebar.classList.remove('collapsed');
-            mainContent.classList.remove('expanded');
-        }
-    });
-</script>
+        // Ejecutar cuando se carga la página
+        document.addEventListener('DOMContentLoaded', setActiveMenuItem);
+    </script>
+</body>
+</html>

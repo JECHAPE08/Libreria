@@ -54,7 +54,6 @@ namespace Biblioteca.Controllers.Administrador
 
             var usuarios = usuariosQuery.ToList();
 
-            // Administradores de esta biblioteca
             var administradores = db.Clientes
                 .Where(u => u.BibliotecaID == id)
                 .ToList();
