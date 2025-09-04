@@ -1,21 +1,260 @@
-﻿@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Bibliotecario - Administración</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="~/Content/Administrador/LayoutAdministrador.css" />
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background: linear-gradient(to bottom, #2c3e50, #1a2530);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar.collapsed {
+            transform: translateX(-250px);
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        .sidebar-title {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .sidebar-menu {
+            flex: 1;
+            padding: 20px 0;
+        }
+
+        .sidebar-item {
+            display: flex;
+            align-items: center;
+            color: #ecf0f1;
+            padding: 15px 20px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+
+        .sidebar-item:hover, .sidebar-item.active {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #3498db;
+            color: white;
+        }
+
+        .sidebar-icon {
+            width: 30px;
+            text-align: center;
+            margin-right: 15px;
+        }
+
+        .sidebar-footer {
+            padding: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+
+        .user-details {
+            flex: 1;
+        }
+
+        .user-name {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .user-role {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        .logout-btn {
+            display: flex;
+            align-items: center;
+            color: #ecf0f1;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .logout-icon {
+            margin-right: 10px;
+        }
+
+        /* Botón de toggle en la parte derecha del menú */
+        #toggleBtn {
+            position: fixed;
+            top: 20px;
+            left: 230px; /* Posicionado a la derecha del sidebar */
+            z-index: 1001;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        #toggleBtn:hover {
+            background: #2980b9;
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        #toggleBtn:active {
+            transform: translateY(1px) scale(0.98);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Ajustar posición cuando el menú está colapsado */
+        .sidebar.collapsed ~ #toggleBtn {
+            left: 20px;
+        }
+
+        /* Líneas del icono de hamburguesa */
+        .hamburger-line {
+            height: 2.5px;
+            width: 20px;
+            background: white;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        /* Transformación a X cuando el menú está abierto */
+        .sidebar:not(.collapsed) ~ #toggleBtn .hamburger-line:nth-child(1) {
+            transform: translateY(6px) rotate(45deg);
+        }
+
+        .sidebar:not(.collapsed) ~ #toggleBtn .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .sidebar:not(.collapsed) ~ #toggleBtn .hamburger-line:nth-child(3) {
+            transform: translateY(-6px) rotate(-45deg);
+        }
+
+        /* Efecto de pulso para llamar la atención */
+        @@keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.6); }
+            70% { box-shadow: 0 0 0 10px rgba(52, 152, 219, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0); }
+        }
+
+        #toggleBtn.pulse {
+            animation: pulse 2s infinite;
+        }
+
+        /* Contenido principal */
+        .main {
+            margin-left: 250px;
+            padding: 30px;
+            transition: margin-left 0.3s ease;
+            min-height: 100vh;
+            background-color: white;
+        }
+
+        .main.expanded {
+            margin-left: 0;
+        }
+
+        /* Media queries para móviles */
+        @@media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-250px);
+                width: 220px;
+            }
+
+            .sidebar.show {
+                transform: translateX(0);
+            }
+
+            #toggleBtn {
+                top: 15px;
+                left: 15px; /* En móviles se posiciona en la esquina izquierda */
+                width: 45px;
+                height: 45px;
+            }
+
+            /* Cuando el menú está abierto en móviles */
+            .sidebar.show ~ #toggleBtn {
+                left: 190px;
+                background: #2c3e50;
+            }
+
+            .main {
+                margin-left: 0;
+                padding: 20px;
+                padding-top: 70px; /* Espacio para el botón */
+            }
+        }
+    </style>
 </head>
 
 <body>
     <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
-            <div class="sidebar-title"></div>
+            <div class="sidebar-title">Sistema Bibliotecario</div>
         </div>
 
         <div class="sidebar-menu">
@@ -54,8 +293,10 @@
         </div>
     </div>
 
-    <button id="toggleBtn" aria-label="Toggle Menu">
-        <i class="fas fa-bars"></i>
+    <button id="toggleBtn" aria-label="Toggle Menu" class="pulse">
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
     </button>
 
     <div id="mainContent" class="main">
@@ -73,16 +314,19 @@
             if (window.innerWidth > 768) {
                 sidebar.classList.toggle('collapsed');
                 mainContent.classList.toggle('expanded');
-                // Actualizar icono del botón
-                const icon = toggleBtn.querySelector('i');
-                if (sidebar.classList.contains('collapsed')) {
-                    icon.className = 'fas fa-bars';
-                } else {
-                    icon.className = 'fas fa-times';
-                }
             } else {
                 sidebar.classList.toggle('show');
             }
+
+            // Añadir efecto de pulso al interactuar
+            toggleBtn.classList.remove('pulse');
+            void toggleBtn.offsetWidth; // Reiniciar animación
+            toggleBtn.classList.add('pulse');
+
+            // Quitar el pulso después de un tiempo
+            setTimeout(() => {
+                toggleBtn.classList.remove('pulse');
+            }, 2000);
         });
 
         // Cerrar sidebar en móviles al hacer clic en un enlace
@@ -130,6 +374,11 @@
 
         // Ejecutar cuando se carga la página
         document.addEventListener('DOMContentLoaded', setActiveMenuItem);
+
+        // Quitar el pulso después de 6 segundos
+        setTimeout(() => {
+            toggleBtn.classList.remove('pulse');
+        }, 6000);
     </script>
 </body>
 </html>

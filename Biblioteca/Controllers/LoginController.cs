@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using Antlr.Runtime.Misc;
 using Biblioteca.Models;
 using Biblioteca.Models.ModelosDTO;
 using Biblioteca.Services;
@@ -87,11 +88,6 @@ namespace Biblioteca.Controllers
             }
             catch
             {
-
-                Debug.Print("--------------------Ocurrio un error al validar con Cliente-------------------------------");
-
-                Debug.Print("Ocurrio un error al validar con Cliente");
-
                 return null;
             }
 
@@ -116,7 +112,6 @@ namespace Biblioteca.Controllers
             }
             catch
             {
-                Debug.Print("-----------------Ocurrio un error al validar con Usuario------------------------");
                 return null;
             }
         }
@@ -137,10 +132,22 @@ namespace Biblioteca.Controllers
             }
             catch
             {
-                Debug.Print("-----------------Ocurrio un error al validar con Administrador------------------------");
                 return null;
             }
         }
+
+        [HttpGet]
+        public ActionResult RecuperarContrasena()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult RecuperarContrasena(string correo)
+        {
+            return View();
+        }
+
 
         protected override void Dispose(bool disposing)
         {

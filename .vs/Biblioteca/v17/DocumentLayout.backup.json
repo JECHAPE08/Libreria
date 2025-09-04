@@ -3,28 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\views\\administradorusuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\views\\shared\\_layoutusuario.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\views\\shared\\_layoutusuario.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\biblioteca\\views\\administradorusuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\views\\administradorusuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\content\\administrador\\usuarios\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\content\\administrador\\usuarios\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\views\\shared\\_layoutadministrador.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\views\\shared\\_layoutadministrador.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\views\\administradorclientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\views\\administradorclientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\content\\usuario\\layoutusuario.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\content\\usuario\\layoutusuario.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\content\\administrador\\clientes\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\content\\administrador\\clientes\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\views\\shared\\_layoutcliente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\views\\shared\\_layoutcliente.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\views\\administradorbibliotecas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\views\\administradorbibliotecas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\views\\usuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\views\\usuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\controllers\\administrador\\administradorclientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\controllers\\administrador\\administradorclientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\controllers\\usuario\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\controllers\\usuario\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\biblioteca\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\biblioteca\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\views\\login\\recuperarcontrasena.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\views\\login\\recuperarcontrasena.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\content\\login\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\content\\login\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|c:\\users\\equipo-12\\source\\repos\\libreria\\biblioteca\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\biblioteca\\content\\login\\recuperarcontrasena.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{0E472FDE-D43C-47FD-BD87-4EA61F8919FE}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\content\\login\\recuperarcontrasena.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,80 +102,171 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.css",
-              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Content\\Administrador\\Usuarios\\Index.css",
-              "RelativeDocumentMoniker": "Biblioteca\\Content\\Administrador\\Usuarios\\Index.css",
-              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Content\\Administrador\\Usuarios\\Index.css*",
-              "RelativeToolTip": "Biblioteca\\Content\\Administrador\\Usuarios\\Index.css*",
-              "ViewState": "AgIAAKQBAAAAAAAAAAAswLwBAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-09-02T22:38:07.631Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\AdministradorUsuarios\\Index.cshtml",
-              "RelativeDocumentMoniker": "Biblioteca\\Views\\AdministradorUsuarios\\Index.cshtml",
-              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\AdministradorUsuarios\\Index.cshtml",
-              "RelativeToolTip": "Biblioteca\\Views\\AdministradorUsuarios\\Index.cshtml",
-              "ViewState": "AgIAAHACAAAAAAAAAAAowIQCAAAXAAAAAAAAAA==",
+              "Title": "_LayoutUsuario.cshtml",
+              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\Shared\\_LayoutUsuario.cshtml",
+              "RelativeDocumentMoniker": "Biblioteca\\Views\\Shared\\_LayoutUsuario.cshtml",
+              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\Shared\\_LayoutUsuario.cshtml",
+              "RelativeToolTip": "Biblioteca\\Views\\Shared\\_LayoutUsuario.cshtml",
+              "ViewState": "AgIAACcBAAAAAAAAAAAgwDIBAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-02T22:30:24.446Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\AdministradorBibliotecas\\Index.cshtml",
-              "RelativeDocumentMoniker": "Biblioteca\\Views\\AdministradorBibliotecas\\Index.cshtml",
-              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\AdministradorBibliotecas\\Index.cshtml",
-              "RelativeToolTip": "Biblioteca\\Views\\AdministradorBibliotecas\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-02T22:07:46.925Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.css",
-              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Content\\Administrador\\Clientes\\Index.css",
-              "RelativeDocumentMoniker": "Biblioteca\\Content\\Administrador\\Clientes\\Index.css",
-              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Content\\Administrador\\Clientes\\Index.css",
-              "RelativeToolTip": "Biblioteca\\Content\\Administrador\\Clientes\\Index.css",
-              "ViewState": "AgIAAKQBAAAAAAAAAAAswLEBAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-09-02T22:07:19.302Z",
+              "WhenOpened": "2025-09-03T20:32:28.137Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\AdministradorClientes\\Index.cshtml",
-              "RelativeDocumentMoniker": "Biblioteca\\Views\\AdministradorClientes\\Index.cshtml",
-              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\AdministradorClientes\\Index.cshtml",
-              "RelativeToolTip": "Biblioteca\\Views\\AdministradorClientes\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Title": "_LayoutAdministrador.cshtml",
+              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\Shared\\_LayoutAdministrador.cshtml",
+              "RelativeDocumentMoniker": "Biblioteca\\Views\\Shared\\_LayoutAdministrador.cshtml",
+              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\Shared\\_LayoutAdministrador.cshtml",
+              "RelativeToolTip": "Biblioteca\\Views\\Shared\\_LayoutAdministrador.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUBAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-02T21:50:38.708Z",
+              "WhenOpened": "2025-09-03T20:32:35.673Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "AdministradorClientesController.cs",
-              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Controllers\\Administrador\\AdministradorClientesController.cs",
-              "RelativeDocumentMoniker": "Biblioteca\\Controllers\\Administrador\\AdministradorClientesController.cs",
-              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Controllers\\Administrador\\AdministradorClientesController.cs",
-              "RelativeToolTip": "Biblioteca\\Controllers\\Administrador\\AdministradorClientesController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAASAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\Usuarios\\Index.cshtml",
+              "RelativeDocumentMoniker": "Biblioteca\\Views\\Usuarios\\Index.cshtml",
+              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\Usuarios\\Index.cshtml",
+              "RelativeToolTip": "Biblioteca\\Views\\Usuarios\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-03T22:51:48.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Controllers\\Usuario\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "Biblioteca\\Controllers\\Usuario\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Controllers\\Usuario\\UsuariosController.cs",
+              "RelativeToolTip": "Biblioteca\\Controllers\\Usuario\\UsuariosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T21:31:02.032Z",
+              "WhenOpened": "2025-09-03T22:52:41.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LayoutUsuario.css",
+              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Content\\Usuario\\LayoutUsuario.css",
+              "RelativeDocumentMoniker": "Biblioteca\\Content\\Usuario\\LayoutUsuario.css",
+              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Content\\Usuario\\LayoutUsuario.css",
+              "RelativeToolTip": "Biblioteca\\Content\\Usuario\\LayoutUsuario.css",
+              "ViewState": "AgIAACoBAAAAAAAAAAAgwDQBAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-03T20:30:59.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Biblioteca\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Biblioteca\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-03T01:06:18.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Biblioteca\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Biblioteca\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAQwJIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T00:51:31.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\Login\\Index.cshtml",
+              "RelativeDocumentMoniker": "Biblioteca\\Views\\Login\\Index.cshtml",
+              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\Login\\Index.cshtml",
+              "RelativeToolTip": "Biblioteca\\Views\\Login\\Index.cshtml",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAgwHAAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-03T20:02:19.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RecuperarContrasena.css",
+              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Content\\Login\\RecuperarContrasena.css",
+              "RelativeDocumentMoniker": "Biblioteca\\Content\\Login\\RecuperarContrasena.css",
+              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Content\\Login\\RecuperarContrasena.css",
+              "RelativeToolTip": "Biblioteca\\Content\\Login\\RecuperarContrasena.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYBAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-03T00:49:34.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\AdministradorUsuarios\\Index.cshtml",
+              "RelativeDocumentMoniker": "Biblioteca\\Views\\AdministradorUsuarios\\Index.cshtml",
+              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\AdministradorUsuarios\\Index.cshtml",
+              "RelativeToolTip": "Biblioteca\\Views\\AdministradorUsuarios\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-03T00:32:35.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_LayoutCliente.cshtml",
+              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\Shared\\_LayoutCliente.cshtml",
+              "RelativeDocumentMoniker": "Biblioteca\\Views\\Shared\\_LayoutCliente.cshtml",
+              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\Shared\\_LayoutCliente.cshtml",
+              "RelativeToolTip": "Biblioteca\\Views\\Shared\\_LayoutCliente.cshtml",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAgwIEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-03T20:34:41.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RecuperarContrasena.cshtml",
+              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\Login\\RecuperarContrasena.cshtml",
+              "RelativeDocumentMoniker": "Biblioteca\\Views\\Login\\RecuperarContrasena.cshtml",
+              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Views\\Login\\RecuperarContrasena.cshtml",
+              "RelativeToolTip": "Biblioteca\\Views\\Login\\RecuperarContrasena.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-03T00:45:39.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.css",
+              "DocumentMoniker": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Content\\Login\\Index.css",
+              "RelativeDocumentMoniker": "Biblioteca\\Content\\Login\\Index.css",
+              "ToolTip": "C:\\Users\\EQUIPO-12\\source\\repos\\Libreria\\Biblioteca\\Content\\Login\\Index.css",
+              "RelativeToolTip": "Biblioteca\\Content\\Login\\Index.css",
+              "ViewState": "AgIAADgBAAAAAAAAAAAgwFMBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-03T20:00:11.702Z",
               "EditorCaption": ""
             }
           ]
